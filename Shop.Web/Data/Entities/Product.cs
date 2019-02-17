@@ -8,7 +8,7 @@ namespace Shop.Web.Data.Entities
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class Product
+    public class Product : IEntity
     {
         public int Id { get; set; }
 
@@ -33,6 +33,8 @@ namespace Shop.Web.Data.Entities
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }
+
+        public User User { get; set; }
     }
 
 }
